@@ -1,0 +1,34 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+textarea {
+  font-weight: 700;
+  color: #545149;
+  background-color: #f4f1ec;
+  border: hidden;
+  border-bottom: 5px solid #545149;
+  width: 50vw;
+}
+
+/* Action class aligns counter & button */
+.action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.counter {
+  font-family: 'Bungee', sans-serif;
+  color: #545149;
+}
+
+button {
+  font-family: 'Bungee', sans-serif;
+  color: #FFFFFF;
+  background-color: #4056A1;
+}
+
