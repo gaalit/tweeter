@@ -13,7 +13,7 @@ textarea {
   width: 50vw;
 }
 
-/* Action class aligns counter & button */
+/* Action class: counter & button */
 .action {
   display: flex;
   flex-direction: row;

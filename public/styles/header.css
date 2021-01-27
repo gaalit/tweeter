@@ -1,4 +1,5 @@
-header {
+#main-header {
+ margin-top: 120px;
  height: 400px;
  width: 100%;
  background-color: rgb(240, 237, 71);
@@ -8,21 +9,5 @@ header {
  display: flex;
  flex-direction: column;
  align-items: center;
-
-
 }
 
-/* .avatar {
-  background-color: #0067d6;
-  background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
-
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-
-.name {
-  display: flex;
-  justify-content: flex-center;
-  align-items: center;
-} */

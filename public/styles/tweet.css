@@ -1,0 +1,64 @@
+.tweet-container {
+  border-style: solid;
+  background-color: #f4f1ec;
+  width: 50vw;
+  margin: 50px auto;
+}
+
+/* image, name and handle */
+.tweet header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+} 
+
+/* image and name */
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.tweet:hover {
+  border: solid rgb(194, 194, 131) 4px;
+}
+
+.tweet img {
+  margin: 5%;
+  width: 95px;
+}
+
+
+.tweet h1 {
+  font-weight: 300;
+  color: #545149;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+}
+
+.tweet h2 {
+  font-weight: 300;
+  color: rgb(194, 194, 131);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  padding-right: 1em;
+}
+
+.tweet-text {
+  font-weight: 300;
+  font-size: 1.4em;
+  color: #545149;
+  margin-left: 5%;
+}
+
+.tweet footer{
+  border-top: solid;
+  margin: 2.5%;
+}
+
+.tweet footer p {
+  font-size: 0.5em;
+  margin-left: 5%;
+}
