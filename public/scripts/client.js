@@ -20,7 +20,9 @@ $(document).ready(() => {
       method: "POST",
       data: $("form").serialize()
     })
-    .then(res => console.log(res));
+    .then(res => {
+      loadTweets();
+    });
   }
  })
 
@@ -61,20 +63,6 @@ const renderTweets = function(tweets) {
   })
 }
 
-//  $("form").on("submit", event => {
-//   event.preventDefault();
-  
-
-//   $
-//     .ajax({
-//       url: "/tweets",
-//       method: "POST",
-//       data: $("form").serialize()
-//     })
-//     .then(res => console.log(res));
-//  })
-
-
  const loadTweets = function () {
   
     $
@@ -86,6 +74,7 @@ const renderTweets = function(tweets) {
     
     .then(results => {console.log(results);
      renderTweets(results)})
+     $("#tweet-text").val("");
     }
 
   loadTweets()
