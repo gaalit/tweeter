@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+$(document).ready(() => {
 
 const data = [
   {
@@ -41,7 +42,7 @@ const tweetData = {
 }
 
 const createTweetElement = function (tweetData) {
-  let $tweet = $("article").addClass("tweet")
+  let $tweet = $("<article>").addClass("tweet")
   
   let html = 
   `<header>
@@ -74,6 +75,39 @@ const renderTweets = function(tweets) {
   tweets.forEach((tweet) => {
     const tweetElement = createTweetElement(tweet)
     container.prepend(tweetElement);
+    console.log(tweetElement);
   })
 }
+
+ $("form").on("submit", event => {
+  event.preventDefault();
+  console.log($("form").serialize())
+
+  $
+    .ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $("form").serialize()
+    })
+    .then(res => console.log(res));
+ })
+
+
+ const loadTweets = function () {
+  
+    $
+    .ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "JSON"
+    })
+    
+    .then(results => {console.log(results);
+     renderTweets(results)})
+    }
+
+  loadTweets()
+
+
+});
 
