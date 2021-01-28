@@ -62,3 +62,10 @@
   font-size: 0.5em;
   margin-left: 5%;
 }
+
+#error-box {
+  border: 5px solid red;
+  padding: 2.5%;
+  margin: 2.5%;
+  color: red;
+}

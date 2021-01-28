@@ -1,18 +1,30 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
+//function to prevent Cross-Site Scripting
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
+
 $(document).ready(() => {
+
+//to hide the error box by default
+$("#error-box").hide();
+
+//to hide the error box once user starts typing again
+$("#tweet-text").on("input", function () {
+  $("#error-box").hide();
+})
 
  $(".send-tweet").on("submit", event => {
   event.preventDefault();
-  const text = $("#tweet-text").val().length;
+  const text = $("#tweet-text").val();
   
-  if (text > 140) {
-    alert("Content is too long!")
-  } else if (text === 0) {
-    alert("No text present!")
+  if (text.length > 140) {
+    $("#error-box").slideDown().prepend($("<div>").addClass("error-message")).text("Your tweet is too long, please remove some text!")
+
+  } else if (text.length === 0) {
+    $("#error-box").slideDown().prepend($("<div>").addClass("error-message")).text("Your tweet is empty, please enter text!")
+
   } else {
     $
     .ajax({
@@ -41,7 +53,7 @@ const createTweetElement = function (tweetData) {
   </header>
    <div class="tweet-text">
     <p>
-      ${tweetData.content.text}
+      ${escape(tweetData.content.text)}
     </p>
   </div>
   <footer>
@@ -78,7 +90,5 @@ const renderTweets = function(tweets) {
     }
 
   loadTweets()
-
-
 });
 
