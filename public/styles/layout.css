@@ -17,7 +17,6 @@ html {
 body {
   color: #545149;
   background-color: #f4f1ec;
-  font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -25,14 +24,60 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-
- nav span {
-  font-family: 'Bungee', sans-serif;
+ #main-header {
+  margin-top: 5em;
+  height: 400px;
+  width: 100%;
+  color: white;
+  background-color: #f0e788;
+  background-image: url("https://www.transparenttextures.com/patterns/batthern.png");
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ 
+ #main-header img {
+  padding-top: 20%;
  }
 
+ /* New tweet and tweet library */
  .container {
    background-color: #f4f1ec;
    width: 90%;
-   margin: 50px;
-   padding: 0% 5%;
+   margin: auto;
+   padding: 10% 5%;
  }
+
+/* Tablet Styles */
+@media only screen and (min-width: 768px) {
+  .layout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f4f1ec;
+    padding-top: 10%;
+  }
+  #main-header {
+    margin-bottom: 15em;
+    margin-left: 2.5%;
+  }
+}
+
+/* Desktop styles */
+ @media only screen and (min-width: 1024px) {
+  .layout-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #f4f1ec;
+  }
+  #main-header {
+    flex-direction: column;
+    /* margin-bottom: 20em; */
+    margin-left: 2.5%;
+  }
+ }
+
