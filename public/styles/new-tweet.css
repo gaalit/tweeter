@@ -1,4 +1,4 @@
-.new-tweet {
+#new-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,6 +6,7 @@
 
 textarea {
   font-weight: 300;
+  font-size: 1.5em;
   color: #545149;
   background-color: #f4f1ec;
   border: hidden;
@@ -20,6 +21,7 @@ textarea {
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
+  font-size: 1.25em;
 }
 .counter {
   font-family: 'Bungee', sans-serif;
@@ -27,7 +29,7 @@ textarea {
 }
 
 .counter-red {
-  color: red !important;
+  color: red;
 }
 
 button {

@@ -1,5 +1,5 @@
 .tweet-container {
-  border-style: solid;
+  /* border-style: solid; */
   background-color: #f4f1ec;
   width: 50vw;
   margin: 50px auto;
@@ -20,9 +20,12 @@
   align-items: center;
 }
 
-
+.tweet {
+  border: solid #545149;
+  margin-bottom: 5%;
+}
 .tweet:hover {
-  border: solid rgb(194, 194, 131) 4px;
+  border: solid rgb(71, 126, 228) 4px;
 }
 
 .tweet img {
@@ -30,27 +33,26 @@
   width: 95px;
 }
 
-
 .tweet h1 {
   font-weight: 300;
   color: #545149;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 
 .tweet h2 {
   font-weight: 300;
-  color: rgb(194, 194, 131);
+  color: rgb(104, 126, 226);
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1em;
+  font-size: 1.25em;
   padding-right: 1em;
 }
 
 .tweet-text {
-  font-weight: 300;
-  font-size: 1.4em;
+  font-size: 1.25em;
+  font-weight: 500;
   color: #545149;
-  margin-left: 5%;
+  margin: 0% 5%;
 }
 
 .tweet footer{
@@ -59,8 +61,12 @@
 }
 
 .tweet footer p {
-  font-size: 0.5em;
+  font-size: 0.75em;
   margin-left: 5%;
+}
+
+.icons {
+  float: right;
 }
 
 #error-box {
