@@ -11,7 +11,15 @@ This repository is the starter code for the project: Students will fork and clon
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
+## Final Product
+
+!["Created New Tweet"](https://github.com/gaalit/tweeter/blob/master/docs/new_tweet.png?raw=true)
+!["Loading New Tweet"](https://github.com/gaalit/tweeter/blob/master/docs/tweet_library.png?raw=true)
+
+
 ## Dependencies
 
 - Express
+- Chance
+- Body-Parser
 - Node 5.10.x or above
