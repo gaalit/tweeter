@@ -1,3 +1,4 @@
+//to adjust counter based on input text
 $(document).ready(function() {
 
   $("#tweet-text").on('keyup', function(event) {

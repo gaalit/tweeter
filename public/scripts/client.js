@@ -25,7 +25,7 @@ $(document).ready(() => {
   //to create new tweets
   $(".send-tweet").on("submit", event => {
     event.preventDefault();
-  
+
     const text = $("#tweet-text").val();
     if (text.length > 140) {
       $("#error-box").slideDown().text("Your tweet is too long, please remove some text!");
@@ -46,6 +46,7 @@ $(document).ready(() => {
         })
         .then(res => {
           loadTweets();
+          $(".counter").val("140");
         });
     }
   });
